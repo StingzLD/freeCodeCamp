@@ -16,7 +16,7 @@ class UnitTests(unittest.TestCase):
         self.assertEqual(actual, expected, 'Expected scanning ports of URL address to return [80].')
   
     def test_port_scanner_url_multiple_ports(self):
-        ports = port_scanner.get_open_ports("scanme.nmap.org", [20, 80], False)
+        ports = port_scanner.get_open_ports("scanme.nmap.org", [22, 80], False)
         actual = ports
         expected = [22, 80]
         self.assertEqual(actual, expected, 'Expected scanning ports of URL address to return [22, 80].')
